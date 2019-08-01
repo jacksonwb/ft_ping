@@ -6,13 +6,13 @@
 #    By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/03 12:06:08 by jbeall            #+#    #+#              #
-#    Updated: 2019/06/28 11:59:45 by jbeall           ###   ########.fr        #
+#    Updated: 2019/07/31 19:36:35 by jbeall           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #==================================== GENERAL =================================#
 
-NAME = new-bin
+NAME = ft_ping
 CC = clang
 CPPFLAGS = -Wall -Wextra -Werror #-g
 LDFLAGS = -pipe -flto=full #-fsanitize=address,undefined
@@ -37,8 +37,8 @@ LIBFT = -L ./libft/ -lft
 
 #=================================== HEADERS ==================================#
 
-INC_DIR = ./includes/
-LIB_INC = libft/includes/
+INC_DIR = ./include/
+LIB_INC = libft/include/
 INC = -I $(LIB_INC) -I $(INC_DIR)
 
 #==================================== COLORS ==================================#

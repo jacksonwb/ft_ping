@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+         #
+#    By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 16:25:23 by jbeall            #+#    #+#              #
-#    Updated: 2018/12/14 21:46:20 by jackson          ###   ########.fr        #
+#    Updated: 2019/07/30 19:55:05 by jbeall           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ SRC_FT_PRINTF := $(addprefix ./src/ft_printf/, $(SRC_FT_PRINTF))
 FLAGS = -Wall -Werror -Wextra -O3
 OBJ = $(notdir $(SRC:.c=.o))
 OBJ += $(notdir $(SRC_FT_PRINTF:.c=.o))
-INC = ./includes
+INC = ./include
 
 $(NAME): $(SRC)
 	@echo "Building libft.a library..."
