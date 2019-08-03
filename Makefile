@@ -6,7 +6,7 @@
 #    By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/03 12:06:08 by jbeall            #+#    #+#              #
-#    Updated: 2019/07/31 19:36:35 by jbeall           ###   ########.fr        #
+#    Updated: 2019/08/02 10:05:24 by jbeall           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@
 
 NAME = ft_ping
 CC = clang
-CPPFLAGS = -Wall -Wextra -Werror #-g
-LDFLAGS = -pipe -flto=full #-fsanitize=address,undefined
-OPT = -O3 -flto=full -march=native #-fsanitize=address,undefined
+CPPFLAGS = -Wall -Wextra -Werror -g
+LDFLAGS = -pipe -flto=full  #-fsanitize=address,undefined
+OPT = #-O3 -flto=full -march=native #-fsanitize=address,undefined
 SUB = libft
 
 #=================================== SOURCES ==================================#
