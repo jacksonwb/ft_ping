@@ -6,7 +6,7 @@
 #    By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/03 12:06:08 by jbeall            #+#    #+#              #
-#    Updated: 2019/08/03 21:16:56 by jbeall           ###   ########.fr        #
+#    Updated: 2019/08/04 12:14:00 by jbeall           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,9 @@ LIST = main \
 echo \
 host \
 ping \
+ping_print \
 icmp_sock \
+parse
 
 VPATH = src
 SRC = $(addsuffix .c, $(LIST))

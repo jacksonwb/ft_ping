@@ -6,7 +6,7 @@
 /*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 20:11:13 by jbeall            #+#    #+#             */
-/*   Updated: 2019/08/03 21:26:17 by jbeall           ###   ########.fr       */
+/*   Updated: 2019/08/04 10:09:45 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ typedef struct			s_host
 	struct sockaddr_in	addr;
 }						t_host;
 
-int host__init(t_host *host, char *hoststring);
+int						host__init(t_host *host, char *hoststring);
 
 #endif

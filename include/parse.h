@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   opts.h                                             :+:      :+:    :+:   */
+/*   parse.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/03 20:20:50 by jbeall            #+#    #+#             */
-/*   Updated: 2019/08/04 10:46:16 by jbeall           ###   ########.fr       */
+/*   Created: 2019/08/04 10:45:35 by jbeall            #+#    #+#             */
+/*   Updated: 2019/08/04 10:48:50 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPTS_H
-# define OPTS_H
+#ifndef PARSE_H
+# define PARSE_H
 
-# define OPT_V 1
-# define OPT_H 2
-# define OPT_C 4
-# define OPT_T 8
-# define OPT_F 16
+# include "ping.h"
+# include "opts.h"
+
+void	parse__args(int ac, char **av, t_ping *opts);
 
 #endif

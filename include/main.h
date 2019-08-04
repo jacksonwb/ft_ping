@@ -6,7 +6,7 @@
 /*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 20:16:05 by jbeall            #+#    #+#             */
-/*   Updated: 2019/08/03 21:29:33 by jbeall           ###   ########.fr       */
+/*   Updated: 2019/08/04 10:58:14 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdio.h>
 # include "libft.h"
 
-extern volatile int g_loop;
+extern volatile int	g_loop;
 
-void	err_exit(char *str);
+void				err_exit(char *str);
 
-# endif
+#endif
