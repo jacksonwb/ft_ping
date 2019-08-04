@@ -6,7 +6,7 @@
 #    By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/03 12:06:08 by jbeall            #+#    #+#              #
-#    Updated: 2019/08/02 10:05:24 by jbeall           ###   ########.fr        #
+#    Updated: 2019/08/03 21:16:56 by jbeall           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,12 @@ SUB = libft
 
 #=================================== SOURCES ==================================#
 
-LIST = main
+LIST = main \
+echo \
+host \
+ping \
+icmp_sock \
+
 VPATH = src
 SRC = $(addsuffix .c, $(LIST))
 

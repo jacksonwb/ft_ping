@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ping.h                                             :+:      :+:    :+:   */
+/*   icmp_sock.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/03 20:13:46 by jbeall            #+#    #+#             */
-/*   Updated: 2019/08/03 21:24:43 by jbeall           ###   ########.fr       */
+/*   Created: 2019/08/03 19:58:42 by jbeall            #+#    #+#             */
+/*   Updated: 2019/08/03 21:29:43 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PING_H
-# define PING_H
+#ifndef ICMP_SOCK_H
+# define ICMP_SOCK_H
 
-# include <signal.h>
-#include "icmp_sock.h"
-#include "host.h"
+# include <netinet/ip.h>
+# include <arpa/inet.h>
+# include <netdb.h>
+# include <time.h>
 #include "echo.h"
-#include "opts.h"
+#include "host.h"
 #include "main.h"
 
-typedef	struct	s_ping
-{
-	int			opts;
-	int			count;
-	int			ttl;
-	int			seq;
-	int			rec;
-	float		min_tm;
-	float		max_tm;
-	float		avg_tm;
-}				t_ping;
+typedef int t_icmp_sock;
 
-int ping(t_ping *opts, t_icmp_sock sfd, t_host *host);
-int ping__flood(t_ping *opts, t_icmp_sock sfd, t_host *host);
+# define PING_TTL 64
+# define PING_TIMEOUT 1
+# define PING_SLEEP 1
 
+t_icmp_sock icmp_sock__new(int ttl);
+int icmp_sock__close(t_icmp_sock sfd);
+int icmp_sock__send(t_echo_req *req, t_icmp_sock sfd, t_host *host);
+int icmp_sock__rec(t_echo_res *res, t_icmp_sock sfd, t_host *host);
 #endif

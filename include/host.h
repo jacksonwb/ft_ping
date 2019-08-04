@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ping.h                                             :+:      :+:    :+:   */
+/*   host.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/03 20:13:46 by jbeall            #+#    #+#             */
-/*   Updated: 2019/08/03 21:24:43 by jbeall           ###   ########.fr       */
+/*   Created: 2019/08/03 20:11:13 by jbeall            #+#    #+#             */
+/*   Updated: 2019/08/03 21:26:17 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PING_H
-# define PING_H
+#ifndef HOST_H
+# define HOST_H
 
-# include <signal.h>
-#include "icmp_sock.h"
-#include "host.h"
-#include "echo.h"
-#include "opts.h"
-#include "main.h"
+# include <stdlib.h>
+# include <netinet/ip.h>
+# include <netdb.h>
+# include <stdio.h>
+# include "libft.h"
 
-typedef	struct	s_ping
+typedef struct			s_host
 {
-	int			opts;
-	int			count;
-	int			ttl;
-	int			seq;
-	int			rec;
-	float		min_tm;
-	float		max_tm;
-	float		avg_tm;
-}				t_ping;
+	char				*hostname;
+	char				*ipstring;
+	char				*fqdn;
+	struct sockaddr_in	addr;
+}						t_host;
 
-int ping(t_ping *opts, t_icmp_sock sfd, t_host *host);
-int ping__flood(t_ping *opts, t_icmp_sock sfd, t_host *host);
+int host__init(t_host *host, char *hoststring);
 
 #endif
