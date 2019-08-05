@@ -6,7 +6,7 @@
 /*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 20:11:05 by jbeall            #+#    #+#             */
-/*   Updated: 2019/08/04 10:32:08 by jbeall           ###   ########.fr       */
+/*   Updated: 2019/08/05 15:17:48 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,6 @@ int	host__init(t_host *host, char *hoststring)
 	if (host__set_ipstring(host, hoststring) < 0)
 		return (-1);
 	if (host__set_fqdn(host, hoststring) < 0)
-		return (-1);
+		host->fqdn = host->ipstring;
 	return (0);
 }
